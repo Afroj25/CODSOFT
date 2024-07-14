@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e2f;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    border: 2px solid #61dafb;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #2c2c3e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    transition: box-shadow 0.3s;
+}
+
+.calculator:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border: 1px solid #61dafb;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #20232a;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.display:empty:before {
+    content: "0";
+    color: #888;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.button {
+    padding: 20px;
+    font-size: 1.8em;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #7ae87f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    background-color: #3E8E41;
+    transform: scale(0.95);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button.operation {
+    background-color: #FF9800;
+}
+
+.button.operation:hover {
+    background-color: #f7c180;
+}
+
+.button.operation:active {
+    background-color: #F57C00;
+}
+
+.button.clear {
+    background-color: #F44336;
+    grid-column: span 4;
+}
+
+.button.clear:hover {
+    background-color: #fb8d8c;
+}
+
+.button.clear:active {
+    background-color: #D32F2F;
+}
+
+.button.equals {
+    background-color: #4CAF50;
+    grid-column: span 2;
+}
+
+.button.equals:hover {
+    background-color: #8bec90;
+}
+
+.button.equals:active {
+    background-color: #388E3C;
+}
